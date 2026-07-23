@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SDG 14: Selamatkan Penyu</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Paparan UI Header (Capsule Biru & Hati) -->
+        <div id="ui">
+            <div class="ui-top-row">
+                <div class="ui-badge">Markah:<span id="score">0</span></div>
+                <div class="ui-badge">Masa:<span id="timer">100</span>s</div>
+            </div>
+            <div id="lives-container">
+                <span id="lives-hearts">❤️❤️❤️</span>
+            </div>
+        </div>
+
+        <!-- Kanvas Permainan (450x800) -->
+        <canvas id="gameCanvas" width="450" height="800"></canvas>
+
+        <!-- POP-UP MENU GAME OVER (Guna imej menu.png) -->
+        <div id="game-over-modal" class="hidden">
+            <div class="modal-content">
+                <h2 id="modal-title">GAME OVER</h2>
+                <p id="modal-msg">Tahniah!</p>
+                <p>Skor Akhir: <strong id="final-score">0</strong></p>
+                
+                <input type="text" id="player-name" placeholder="Masukkan Nama Anda..." maxlength="15" required />
+                <button id="submit-btn" onclick="submitData()">HANTAR SKOR</button>
+                <button id="restart-btn" onclick="location.reload()">MAIN SEMULA</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
